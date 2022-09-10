@@ -31,7 +31,7 @@ type ExtraInfo struct {
 	EquipmentCheck    string
 }
 
-func login(username string, password string, deviceId string) {
+func Login(username string, password string, deviceId string) {
 
 	loginUrl := "https://userapi.webull.com/api/passport/login/v5/account"
 
