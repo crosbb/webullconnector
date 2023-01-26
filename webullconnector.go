@@ -7,9 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"log"
 	"net/http"
-	"net/http/httputil"
 	"time"
 )
 
@@ -67,8 +65,6 @@ func Login(username string, password string, deviceId string) (LoginResp, error)
 	text := "wl_app-a&b@!423^" + password
 	hash := md5.Sum([]byte(text))
 	pwdHash := hex.EncodeToString(hash[:])
-
-	print(pwdHash)
 
 	reqBody := LoginReq{
 		Account:     username,
